@@ -2,7 +2,7 @@
 ?>
 
 <form action="index.php?action=ajouterGenre" method="post">
-    <label for="genre">GENRE :</label>
+    <label for="genre">Genre :</label>
     <input type="text" id="genre" name="genre" required>
     <br>
 

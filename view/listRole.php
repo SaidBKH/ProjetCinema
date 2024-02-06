@@ -24,7 +24,7 @@
 
 <?php
 
-$titre = "LISTE DES ROLES";
-$titre_secondaire = "LISTE DES ROLES";
+$titre = "LISTE DES ROLES :";
+$titre_secondaire = "LISTE DES ROLES :";
 $contenu = ob_get_clean() ;
 require "view/template.php";

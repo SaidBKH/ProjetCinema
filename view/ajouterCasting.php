@@ -3,7 +3,7 @@
 
 <form action="index.php?action=ajouterCasting" method="post">
 
-    <label for="idFilm">FILM :</label>
+    <label for="idFilm">Film :</label>
     <select name="idFilm" id="idFilm" required>
        
         <?php foreach ($films as $film): ?>
@@ -12,7 +12,7 @@
     </select>
     <br>
 
-    <label for="idActeur">ACTEUR : </label>
+    <label for="idActeur">Acteur : </label>
     <select name="idActeur" id="idActeur" required>
         <?php foreach ($acteurs as $acteur): ?>
             <option value="<?= $acteur['IdActeur'] ?>"><?= $acteur['Prenom'] . ' ' . $acteur['Nom'] ?></option>
@@ -20,7 +20,7 @@
     </select>
     <br>
 
-    <label for="idRole">ROLE:</label>
+    <label for="idRole">Role :</label>
     <select name="idRole" id="idRole" required>
         <?php foreach ($roles as $role): ?>
             <option value="<?= $role['IdRole'] ?>"><?= $role['NomPersonnage'] ?></option>

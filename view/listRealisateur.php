@@ -26,8 +26,8 @@
 
 <?php
 
-$titre = "LISTE DES REALISATEURS";
-$titre_secondaire = "LISTE DES REALISATEURS";
+$titre = "LISTE DES REALISATEURS :";
+$titre_secondaire = "LISTE DES REALISATEURS :";
 $contenu = ob_get_clean() ;
 require "view/template.php";
 

@@ -34,8 +34,8 @@ pour stocker le contenu dans une variable $contenu -->
 
 <?php
 
-$titre = "LISTE DES ACTEURS";
-$titre_secondaire = "LISTE DES ACTEURS";
+$titre = "LISTE DES ACTEURS :";
+$titre_secondaire = "LISTE DES ACTEURS :";
 $contenu = ob_get_clean() ;
 require "view/template.php";
 

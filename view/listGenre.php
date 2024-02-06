@@ -30,8 +30,8 @@ use Model\Connect;
 
 <?php
 
-$titre = "LISTE DES GENRES";
-$titre_secondaire = "LISTE DES GENRES";
+$titre = "LISTE DES GENRES :";
+$titre_secondaire = "LISTE DES GENRES :";
 $contenu = ob_get_clean() ;
 require "view/template.php";
 

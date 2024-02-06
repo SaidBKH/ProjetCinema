@@ -345,7 +345,6 @@ public function ajouterActeur() {
 ////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-
 public  function listRealisateur() {
 
     $pdo = Connect::seConnecter();
@@ -474,7 +473,6 @@ public function ajouterRole() {
 
             header("Location: index.php?action=listRole");die;
         }
-
       
     }
 
@@ -505,9 +503,14 @@ public function ajouterCasting() {
         // Vérifier que les données sont présentes
         if ($idFilm && $idActeur && $idRole) {
             
-            // Insérer dans la table JoueDans
-            $pdo->prepare("INSERT INTO JoueDans (IdFilm, IdActeur, IdRole) VALUES (?, ?, ?)")
-                ->execute([$idFilm, $idActeur, $idRole]);
+            // Insérer dans la table JoueDans avec des paramètres nommés
+        $requeteInsert = $pdo->prepare("INSERT INTO JoueDans (IdFilm, IdActeur, IdRole) VALUES (:idFilm, :idActeur, :idRole)");
+        $requeteInsert->execute([
+                        'idFilm' => $idFilm,
+                        'idActeur' => $idActeur,
+                        'idRole' => $idRole
+]);
+
 
             
             header("Location: index.php?action=listRole"); 
