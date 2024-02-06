@@ -119,10 +119,14 @@ public function ajouterFilm() {
                         "idFilm" => $idFilm,
                         "idGenre" => $idGenre
                     ]);
+                    {
+              
+                        $message = "L'acteur a été ajouté avec succès.";
+                    } 
 
                 }
 
-            header("Location: index.php?action=listFilms");die;
+           // header("Location: index.php?action=listFilms");die;
         }
     }
 
@@ -249,8 +253,12 @@ public function ajouterFilm() {
             if($genre) {
                 $requeteInsertGenre = $pdo->prepare("INSERT INTO genre (NomGenre) VALUES (:NomGenre)");
                 $requeteInsertGenre->execute(["NomGenre" => $genre]);
-
-                header("Location: index.php?action=listGenre");die;
+                {
+              
+                    $message = "Le genre à été ajouté avec succès.";
+                } 
+                
+                //header("Location: index.php?action=listGenre");die;
             }
 
             // Récupérez l'ID du Genre nouvellement inséré
@@ -306,9 +314,10 @@ public function detailActeur($id) {
 
 public function ajouterActeur() {
     $pdo = Connect::seConnecter();
+    $message = ''; // Initialisation du message
+
     // Si un formulaire est soumis
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
-
         
         // Récupérez les données du formulaire
         $nom = filter_input(INPUT_POST, "nom", FILTER_SANITIZE_SPECIAL_CHARS);
@@ -316,29 +325,24 @@ public function ajouterActeur() {
         $sexe = filter_input(INPUT_POST, "sexe", FILTER_SANITIZE_SPECIAL_CHARS);
         $dateNaissance = filter_input(INPUT_POST, "dateNaissance", FILTER_SANITIZE_SPECIAL_CHARS);
 
-        
-        if($nom && $prenom && $sexe && $dateNaissance) {
+        if ($nom && $prenom && $sexe && $dateNaissance) {
             $requeteInsertActeur = $pdo->prepare("INSERT INTO acteur (Nom,Prenom,Sexe,DateNaissance) VALUES (:Nom, :Prenom, :Sexe, :DateNaissance)");
-            $requeteInsertActeur->execute(
-                [
-                    "Nom" => $nom,
-                    "Prenom" => $prenom,
-                    "Sexe" => $sexe,
-                    "DateNaissance" => $dateNaissance
-                ]);
-
-            header("Location: index.php?action=listActeur");die;
-        }
-
-        // Récupérez l'ID du Genre nouvellement inséré
-        //$idGenre = $pdo->lastInsertId();
-      
+            if ($requeteInsertActeur->execute([
+                "Nom" => $nom,
+                "Prenom" => $prenom,
+                "Sexe" => $sexe,
+                "DateNaissance" => $dateNaissance
+            ])) {
+              
+                $message = "L'acteur a été ajouté avec succès.";
+            } 
+        } 
     }
 
-// Chargez la vue du formulaire d'ajout
+    // Chargez la vue du formulaire d'ajout
     require "view/ajouterActeur.php";
+}
 
- }
 
  ////////////////////////////////////////////////////////////////////////////////////////////////      
 ///////////////////////////////////       REALISATEUR     ///////////////////////////////////////
@@ -404,8 +408,11 @@ public function ajouterRealisateur() {
                     "Prenom" => $prenom,
                     
                 ]);
-
-            header("Location: index.php?action=listRealisateur");die;
+                {
+              
+                    $message = "Le realisateur a été ajouté avec succès.";
+                } 
+           // header("Location: index.php?action=listRealisateur");die;
         }
 
         // Récupérez l'ID du Genre nouvellement inséré
@@ -471,7 +478,12 @@ public function ajouterRole() {
             $requeteInsertRole = $pdo->prepare("INSERT INTO role (NomPersonnage) VALUES (:NomPersonnage)");
             $requeteInsertRole->execute(["NomPersonnage" => $role]);
 
-            header("Location: index.php?action=listRole");die;
+            {
+              
+                $message = "Le role a été ajouté avec succès.";
+            } 
+
+            //header("Location: index.php?action=listRole");die;
         }
       
     }
@@ -481,45 +493,57 @@ public function ajouterRole() {
 
     }
 
-public function ajouterCasting() {
-    $pdo = Connect::seConnecter();
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    // Récupérer la liste des films, acteurs et rôles
-    $reqFilms = $pdo->query("SELECT IdFilm, Titre FROM film");
-    $reqActeurs = $pdo->query("SELECT IdActeur, Nom, Prenom FROM acteur");
-    $reqRoles = $pdo->query("SELECT IdRole, NomPersonnage FROM role");
 
-    $films = $reqFilms->fetchAll();
-    $acteurs = $reqActeurs->fetchAll();
-    $roles = $reqRoles->fetchAll();
-
-    // Si le formulaire est soumis
-    if ($_SERVER["REQUEST_METHOD"] === "POST") {
-        
-        $idFilm = filter_input(INPUT_POST, "idFilm", FILTER_SANITIZE_SPECIAL_CHARS);
-        $idActeur = filter_input(INPUT_POST, "idActeur", FILTER_SANITIZE_SPECIAL_CHARS);
-        $idRole = filter_input(INPUT_POST, "idRole", FILTER_SANITIZE_SPECIAL_CHARS);
-
-        // Vérifier que les données sont présentes
-        if ($idFilm && $idActeur && $idRole) {
+    public function ajouterCasting() {
+        $pdo = Connect::seConnecter();
+    
+        // Récupérer la liste des films, acteurs et rôles
+        $reqFilms = $pdo->query("SELECT IdFilm, Titre FROM film");
+        $reqActeurs = $pdo->query("SELECT IdActeur, Nom, Prenom FROM acteur");
+        $reqRoles = $pdo->query("SELECT IdRole, NomPersonnage FROM role");
+    
+        $films = $reqFilms->fetchAll();
+        $acteurs = $reqActeurs->fetchAll();
+        $roles = $reqRoles->fetchAll();
+    
+        // Si le formulaire est soumis
+        if ($_SERVER["REQUEST_METHOD"] === "POST") {
             
-            // Insérer dans la table JoueDans avec des paramètres nommés
-        $requeteInsert = $pdo->prepare("INSERT INTO JoueDans (IdFilm, IdActeur, IdRole) VALUES (:idFilm, :idActeur, :idRole)");
-        $requeteInsert->execute([
+            $idFilm = filter_input(INPUT_POST, "idFilm", FILTER_SANITIZE_SPECIAL_CHARS);
+            $idActeur = filter_input(INPUT_POST, "idActeur", FILTER_SANITIZE_SPECIAL_CHARS);
+            $idRole = filter_input(INPUT_POST, "idRole", FILTER_SANITIZE_SPECIAL_CHARS);
+    
+            // Vérifier que les données sont présentes
+            if ($idFilm && $idActeur && $idRole) {
+               
+                // Vérifier si l'entrée existe déjà
+                $requeteExistence = $pdo->prepare("SELECT COUNT(*) FROM JoueDans WHERE IdFilm = :idFilm AND IdActeur = :idActeur AND IdRole = :idRole");
+                $requeteExistence->execute([
+                    'idFilm' => $idFilm,
+                    'idActeur' => $idActeur,
+                    'idRole' => $idRole
+                ]);
+                $requeteEntree = $requeteExistence->fetchColumn();
+            //    $requeteEntree C'est le nombre d'entrées trouvées dans la table JoueDans qui correspondent aux valeurs de IdFilm, IdActeur et IdRole
+                // Si l'entrée n'existe pas, alors seulement insérer
+                if ($requeteEntree === 0) {    // signifie que si le nombre d'entrées trouvées est exactement égal à zéro
+                    $requeteInsert = $pdo->prepare("INSERT INTO JoueDans (IdFilm, IdActeur, IdRole) VALUES (:idFilm, :idActeur, :idRole)");
+                    if ($requeteInsert->execute([
                         'idFilm' => $idFilm,
                         'idActeur' => $idActeur,
                         'idRole' => $idRole
-]);
-
-
-            
-            header("Location: index.php?action=listRole"); 
-            die;
+                    ])) {
+                        $message = "Le casting a été ajouté avec succès.";
+                    } 
+                } else {
+                    $message = "Ce casting existe déjà.";
+                }           
+            }
         }
+    
+        // Charger la vue du formulaire
+        require "view/ajouterCasting.php";
     }
-
-    // Charger la vue du formulaire
-    require "view/ajouterCasting.php";
-}
-
-}
+}  

@@ -1,6 +1,8 @@
 <?php ob_start(); 
 ?>
-
+<?php if (isset($message)): ?>
+    <p><?php echo $message; ?></p>
+<?php endif; ?>
 <form action="index.php?action=ajouterRole" method="post">
     <label for="role">role :</label>
     
