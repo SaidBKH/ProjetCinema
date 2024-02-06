@@ -2,6 +2,9 @@
 
 <p class="uk-label uk-label-warning">Il y a <?= $requete->rowCount() ?>  personnages</p>
 
+<a href="index.php?action=ajouterRole" class = ajouter>AJOUTER UN ROLE </a>
+
+
 <table class="uk-table uk-table-striped">
     <thead>
         <tr>
@@ -13,7 +16,7 @@
         <?php
             foreach($requete->fetchAll() as $role) { ?>
             <tr>
-                <td><?=$role["NomPersonnage"] ?></td>
+                <td><a href="index.php?action=detailRole&id=<?=$role["IdRole"]?>"><?=$role["NomPersonnage"] ?></a></td>
             </tr>
         <?php } ?>
     </tbody>
@@ -21,7 +24,7 @@
 
 <?php
 
-$titre = "Liste des roles";
-$titre_secondaire = "liste des rôles";
+$titre = "LISTE DES ROLES";
+$titre_secondaire = "LISTE DES ROLES";
 $contenu = ob_get_clean() ;
 require "view/template.php";

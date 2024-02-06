@@ -5,7 +5,10 @@ pour stocker le contenu dans une variable $contenu -->
 
 <?php ob_start(); ?>
 
-<p class="uk-label uk-label-warning">Il y a <?= $requete->rowCount() ?> acteur</p>
+<p class="uk-label uk-label-warning">Il y a <?= $requete->rowCount() ?> acteurs</p>
+
+<a href="index.php?action=ajouterActeur" class = ajouter>AJOUTER UN ACTEUR</a>
+
 
 <table class="uk-table uk-table-striped">
     <thead>
@@ -20,10 +23,10 @@ pour stocker le contenu dans une variable $contenu -->
         <?php
             foreach($requete->fetchAll() as $acteur) { ?>
             <tr>
-                <td><?=$acteur["Nom"] ?></td>
+            <td><a href="index.php?action=detailActeur&id=<?=$acteur["IdActeur"]?>"><?=$acteur["Nom"] ?></a></td>
                 <td><?= $acteur["Prenom"] ?></td>
                 <td><?=$acteur["Sexe"] ?></td>
-                <td><?=$acteur["DateNaissance"] ?></td>
+                <td><?= date('d/m/Y', strtotime($acteur["DateNaissance"])) ?></td>
             </tr>
         <?php } ?>
     </tbody>
@@ -31,8 +34,8 @@ pour stocker le contenu dans une variable $contenu -->
 
 <?php
 
-$titre = "Liste des acteurs";
-$titre_secondaire = "liste des acteurs";
+$titre = "LISTE DES ACTEURS";
+$titre_secondaire = "LISTE DES ACTEURS";
 $contenu = ob_get_clean() ;
 require "view/template.php";
 

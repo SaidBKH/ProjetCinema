@@ -1,6 +1,9 @@
 <?php ob_start(); ?>
 
-<p class="uk-label uk-label-warning">Il y a <?= $requete->rowCount() ?> réalisateur</p>
+<p class="uk-label uk-label-warning">Il y a <?= $requete->rowCount() ?> réalisateurs</p>
+
+<a href="index.php?action=ajouterRealisateur" class = ajouter>AJOUTER UN REALISATEUR</a>
+<br>
 
 <table class="uk-table uk-table-striped">
     <thead>
@@ -13,8 +16,9 @@
         <?php
             foreach($requete->fetchAll() as $realisateur) { ?>
             <tr>
-                <td><?=$realisateur["Nom"] ?></td>
-                <td><?= $realisateur["Prenom"] ?></td>       
+            <td><a href="index.php?action=detailRealisateur&id=<?= $realisateur["IdRealisateur"]?>"><?=$realisateur["Nom"]?></a></td>
+            <td><?=$realisateur["Prenom"]  ?></td>
+
             </tr>
         <?php } ?>
     </tbody>
@@ -22,8 +26,8 @@
 
 <?php
 
-$titre = "Liste des realisateur";
-$titre_secondaire = "liste des realisateurs";
+$titre = "LISTE DES REALISATEURS";
+$titre_secondaire = "LISTE DES REALISATEURS";
 $contenu = ob_get_clean() ;
 require "view/template.php";
 
