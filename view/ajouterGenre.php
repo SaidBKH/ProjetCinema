@@ -1,6 +1,8 @@
 <?php ob_start(); 
 ?>
-
+<?php if (isset($message)): ?>
+    <p><?php echo $message; ?></p>
+<?php endif; ?>
 <form action="index.php?action=ajouterGenre" method="post">
     <label for="genre">Genre :</label>
     <input type="text" id="genre" name="genre" required>

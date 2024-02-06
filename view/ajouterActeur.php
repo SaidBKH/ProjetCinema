@@ -1,6 +1,10 @@
 <?php ob_start(); 
 ?>
 
+<?php if (isset($message)): ?>
+    <p><?php echo $message; ?></p>
+<?php endif; ?>
+
 <form action="index.php?action=ajouterActeur" method="post">
     <label for="nom">Nom :</label>
     <input type="text" id="nom" name="nom" required>

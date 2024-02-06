@@ -1,6 +1,10 @@
 
 <?php ob_start(); ?>
 
+<?php if(isset($message)): ?>
+        <p><?php echo $message; ?></p>
+<?php endif ?>
+
 <form action="index.php?action=ajouterCasting" method="post">
 
     <label for="idFilm">Film :</label>

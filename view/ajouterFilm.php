@@ -1,6 +1,10 @@
 <?php ob_start(); 
 ?>
 
+<?php if (isset($message)): ?>
+    <p><?php echo $message; ?></p>
+<?php endif; ?>
+
 <form action="index.php?action=ajouterFilm" method="post">
     <label for="titre">Titre :</label>
     <input type="text" id="titre" name="titre" required>

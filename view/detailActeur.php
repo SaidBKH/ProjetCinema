@@ -1,4 +1,3 @@
-<!-- view/detailActeur.php -->
 
 <?php ob_start(); ?>
 

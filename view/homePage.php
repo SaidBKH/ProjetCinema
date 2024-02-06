@@ -10,9 +10,7 @@
 <body>
 
     <header>
-        <figure>
-            <img class="logo" src="public/img/logo.png" alt="Le logo" height="100px"/>
-        </figure>
+        
         
         <nav class = "uk-navbar-conteiner"> 
 
@@ -23,15 +21,14 @@
             <li><a href="index.php?action=listGenre">GENRES</a></li>
             <li><a href="index.php?action=listRole">ROLES</a></li>
             <li><a href="index.php?action=ajouterCasting">CASTING</a></li>
-            <li><a href="index.php?action=homePage">Accueil</a></li>
 
         </ul>
     </nav>
     </header>
 
-    <div id="wrapper" class="uk-container uk-container-expand">
+   
         <main>
-            <div id ="contenu">
+            
                 <h2 class="uk-heading-bullet"><?= $titre_secondaire ?> </h2>
                 <?= $contenu?>             
             </div>
