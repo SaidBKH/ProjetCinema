@@ -1,42 +1,207 @@
 body {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(200, 200, 200);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;
     padding: 0;
+    height: 100%;
     box-sizing: border-box;
 }
 
-header {
-    background-color: rgb(56, 56, 56);
-}
 
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////     HEADER     ///////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+header {
+    background-color: 
+    rgb(255, 28, 28);
+}
 
 
 nav ul {
-    height: 25px;
+    
+    height: 30px;
     display: flex;
+    align-items: center;
     justify-content: center;
     list-style-type: none;
-    background-color: gray;
+    background-color: rgb(209, 0, 0);
 }
 
 nav li {
-    margin-right: 20px;
-
+    
+padding-left: 30px;
 }
 
 nav a {
     
-    font-size: small;
+    font-size: 20px;
     text-align: center;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-decoration: none;
-    
+    display: block; 
+    height: 100%; 
+    line-height: 30px; 
 }
 
+
 nav a:hover {
-    background-color: rgb(56, 56, 56);
-   
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 0, 0);
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////     SLIDER     ///////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.slider-container {
+    background-color: rgb(205, 205, 205);
+    width: 70%; 
+    height: 50%;
+    margin: auto;
+    overflow: hidden; 
+}
+
+.slider {
+    display: flex; 
+}
+
+.slider img {
+    width: 100%; 
+    height: 300px;
+    object-fit: cover; 
+    object-position: top;
+}
+
+.slider-image:hover {
+  
+    opacity: 0.3;
+    cursor: pointer; 
+}
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////     SORTIE DE LA SEMAINE     /////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/* Styles pour la section "Sortie de la Semaine" */
+.films-sortie-semaine {
+    width: 70%;
+    margin: 0 auto; 
+    background-color: #ffffff; 
+}
+
+.films-sortie-semaine .titre {
+    font-size: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    text-align: left;
+    margin-bottom: 20px; 
+}
+
+.films-sortie-semaine .list-film {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.films-sortie-semaine .film {
+    padding-left: 20px;
+    width: 150px; 
+    text-align: center; 
+    margin-bottom: 20px; 
+    transition: transform 0.3s ease; 
+}
+
+.films-sortie-semaine .film:hover {
+    transform: scale(1.05); 
+} 
+
+.films-sortie-semaine .film img {
+    border-radius: 10px;
+    width: 100px; 
+    height: 150px; 
+}
+
+.films-sortie-semaine .film img:hover {
+    opacity: 0.7; 
+}
+
+.films-sortie-semaine .film p {
+    margin-top: 5px; 
+    font-size: 14px; 
+}
+
+.voirPlusSortie a {
+    background-color: red; 
+    color: white; 
+    padding: 5px 10px;
+    text-decoration: none; 
+    border-radius: 5px; 
+}
+
+.voirPlusSortie a:hover {
+    color: white;
+    background-color: rgb(160, 10, 10); 
+}
+
+.top-films-semaine {
+    width: 70%;
+    margin: 0 auto; 
+    background-color: #ffffff; 
+}
+
+.top-films-semaine .titre {
+    font-size: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    text-align: left;
+    margin-bottom: 20px; 
+}
+
+.top-films-semaine .list-film {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.top-films-semaine .film {
+    padding-left: 20px;
+    width: 150px; 
+    text-align: center; 
+    margin-bottom: 20px; 
+    transition: transform 0.3s ease; 
+}
+
+.top-films-semaine .film:hover {
+    transform: scale(1.05); 
+}
+
+.top-films-semaine .film img {
+    border-radius: 10px;
+    width: 100px; 
+    height: 150px; 
+}
+
+.top-films-semaine .film p {
+    margin-top: 5px; 
+    font-size: 14px; 
+}
+
+.voirPlusTop a {
+    background-color: red; 
+    color: white; 
+    padding: 5px 10px; 
+    text-decoration: none; 
+    border-radius: 5px; 
+}
+
+.voirPlusTop a:hover {
+    color: white;
+    background-color: rgb(160, 10, 10); 
+}
+
+.section-title {
+    margin-bottom: 20px;
 }
 
 
@@ -46,9 +211,9 @@ nav a:hover {
     margin: auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h3, h4, h5, h6 {
     padding: 10px;
-    color: orange;
+    color: rgb(248, 21, 21);
 }
 p{ 
     color: rgb(0, 0, 0);
@@ -145,7 +310,7 @@ img{  width : 100%;  height : 100%;
 
 .logo{
     filter: grayscale(100%);
-
+margin-left: 20px;
     height: 50%;
     width: 50%
 }

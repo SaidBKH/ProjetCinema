@@ -9,6 +9,7 @@ use Model\Connect;   //On remarquera ici l'utilisation du "use" pour accéder à
 class CinemaController {
 
 
+
     public function listFilms() {
 
         $pdo = Connect::seConnecter();
@@ -197,7 +198,30 @@ public function ajouterFilm() {
 // $reqRealisateur = $pdo->query("SELECT IdRealisateur, Nom, Prenom FROM realisateur");
 
 
+public function filmsSortieSemaine() {
+    $pdo = Connect::seConnecter();
+    $requete = $pdo->query("
+        SELECT IdFilm, Titre, Affiche
+        FROM Film
+        ORDER BY AnneeSortie DESC
+        LIMIT 5
+    ");
 
+    return $requete->fetchAll();
+}
+
+
+public function topFilmsSemaine() {
+    $pdo = Connect::seConnecter();
+    $requete = $pdo->query("
+        SELECT IdFilm, Titre, Affiche
+        FROM Film
+        ORDER BY Note DESC
+        LIMIT 5
+    ");
+
+    return $requete->fetchAll();
+}
 
  ////////////////////////////////////////////////////////////////////////////////////////////////      
 ////////////////////////////////////////   GENRES   ////////////////////////////////////////////

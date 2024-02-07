@@ -86,5 +86,9 @@ if (isset($_GET["action"])) {
                
     }
 }
+
+if (!isset($_GET["action"]) || $_GET["action"] === "homePage") {
+    require "view/homePage.php";
+}
 ?>
 

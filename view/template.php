@@ -23,7 +23,6 @@
             <li><a href="index.php?action=listGenre">GENRES</a></li>
             <li><a href="index.php?action=listRole">ROLES</a></li>
             <li><a href="index.php?action=ajouterCasting">CASTING</a></li>
-            <li><a href="index.php?action=homePage">Accueil</a></li>
 
         </ul>
     </nav>
