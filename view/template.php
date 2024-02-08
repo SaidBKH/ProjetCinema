@@ -11,7 +11,9 @@
 
     <header>
         <figure>
+            <a href="index.php?action=homePage">
             <img class="logo" src="public/img/logo.png" alt="Le logo" height="100px"/>
+            </a>
         </figure>
         
         <nav class = "uk-navbar-conteiner"> 

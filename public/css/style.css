@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(200, 200, 200);
+    background-color: rgb(225, 225, 225);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;
     padding: 0;
@@ -35,7 +35,7 @@ padding-left: 30px;
 
 nav a {
     
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     color: rgb(255, 255, 255);
     text-decoration: none;
@@ -85,7 +85,6 @@ nav a:hover {
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 
-/* Styles pour la section "Sortie de la Semaine" */
 .films-sortie-semaine {
     width: 70%;
     margin: 0 auto; 
@@ -123,6 +122,7 @@ nav a:hover {
     height: 150px; 
 }
 
+
 .films-sortie-semaine .film img:hover {
     opacity: 0.7; 
 }
@@ -133,9 +133,9 @@ nav a:hover {
 }
 
 .voirPlusSortie a {
-    background-color: red; 
+    background-color: rgb(252, 39, 39); 
     color: white; 
-    padding: 5px 10px;
+    padding: 3px 5px;
     text-decoration: none; 
     border-radius: 5px; 
 }
@@ -144,6 +144,13 @@ nav a:hover {
     color: white;
     background-color: rgb(160, 10, 10); 
 }
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////     TOP FILMS DE LA SEMAINE     /////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
 
 .top-films-semaine {
     width: 70%;
@@ -165,6 +172,7 @@ nav a:hover {
 }
 
 .top-films-semaine .film {
+    position: relative;
     padding-left: 20px;
     width: 150px; 
     text-align: center; 
@@ -172,14 +180,32 @@ nav a:hover {
     transition: transform 0.3s ease; 
 }
 
+.top-films-semaine  span.rank-badge {
+    position: absolute;
+    background-color: rgb(207, 7, 7);
+    color: white;
+    width: 25px;
+    height: 28px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 8px; 
+    
+}
+
+
 .top-films-semaine .film:hover {
     transform: scale(1.05); 
 }
 
 .top-films-semaine .film img {
-    border-radius: 10px;
+    border-radius: 8px;
     width: 100px; 
     height: 150px; 
+}
+
+.top-films-semaine img.film-image:hover {
+    opacity: 0.2; 
 }
 
 .top-films-semaine .film p {
@@ -188,9 +214,9 @@ nav a:hover {
 }
 
 .voirPlusTop a {
-    background-color: red; 
+    background-color: rgb(252, 39, 39); 
     color: white; 
-    padding: 5px 10px; 
+    padding: 3px 5px;
     text-decoration: none; 
     border-radius: 5px; 
 }
@@ -201,8 +227,205 @@ nav a:hover {
 }
 
 .section-title {
-    margin-bottom: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    margin-bottom: 30px;
 }
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////        ACTEURS REALISATEURS POPULAIRE       /////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+.populaires-sections {
+    background-color: #ffffff; 
+    width: 70%;
+    margin: 0 auto;
+    display: flex; 
+}
+
+.acteurs-populaires,
+.realisateurs-populaires {
+    flex: 1; 
+   
+}
+
+.acteurs-populaires .titre,
+.realisateurs-populaires .titre {
+    font-size: 10px;
+    padding-top: 10px;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    }
+
+.acteurs-populaires ul,
+.realisateurs-populaires ul {
+    
+    list-style-type: none;
+   
+}
+
+.acteurs-populaires ul li,
+.realisateurs-populaires ul li {
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 18px;
+    
+}
+
+.voirPlusActeur{
+    display: flex;
+    justify-content: end;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.voirPlusRealisateur{
+    display: flex;
+    padding-right: 20px;
+    justify-content: end;
+    padding-bottom: 20px;
+}
+
+.realisateurs-populaires ul li:hover {
+   
+    transform: scale(1.1 );
+}
+
+.acteurs-populaires ul li:hover {
+    transform: scale(1.1); 
+}
+
+.voirPlusRealisateur a {
+    margin-left: 30px;
+    background-color: rgb(252, 39, 39); 
+    color: white; 
+    padding: 3px 5px;
+    text-decoration: none; 
+    border-radius: 5px; 
+}
+
+.voirPlusRealisateur a:hover {
+    color: white;
+    background-color: rgb(160, 10, 10); 
+}
+
+.voirPlusActeur a {
+    margin-left: 30px;
+    background-color: rgb(252, 39, 39); 
+    color: white; 
+    padding: 3px 5px;
+    text-decoration: none; 
+    border-radius: 5px; 
+}
+
+.voirPlusActeur a:hover {
+    color: white;
+    background-color: rgb(160, 10, 10); 
+}
+
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////        GENRES POPULAIRES      /////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.genres-populaires {
+    width: 70%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    margin-top: 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.genres-populaires .titre {
+    font-size: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    text-align: center; 
+}
+
+.genres-populaires ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+}
+
+.genres-populaires ul li {
+    margin-right: 30px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    
+}
+
+.genres-populaires ul li:hover {
+    transform: scale(1.1); 
+}
+
+.voirPlusGenre {
+    margin-top: 20px; 
+    margin-bottom: 20px;}
+
+.voirPlusGenre a {
+    padding-bottom: 20px;
+    margin-left: 30px;
+    background-color: rgb(252, 39, 39); 
+    color: white; 
+    padding: 3px 5px;
+    text-decoration: none; 
+    border-radius: 5px; 
+}
+
+.voirPlusGenre a:hover {
+    color: white;
+    background-color: rgb(160, 10, 10); 
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////       FOOTER           /////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+.footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    background-color: #000000; 
+    padding: 20px; 
+    width: 100%; 
+   
+}
+
+
+.footer-bar {
+    list-style-type: none;
+    
+}
+
+.footer-bar li {
+    font-size: 12px;
+    display: inline; 
+    margin-right: 20px; 
+}
+
+.footer-bar li a {
+    color: #ffffff; 
+    text-decoration: none; 
+}
+
+.footer-bar li a:hover {
+    color: #cccccc; 
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////       AUTRES VUES           /////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
 
 
 #wrapper {
@@ -224,8 +447,8 @@ p{
     padding: 5px;
     display: flex;
     justify-content: center;
-    background-color: orange;
-    color: #000000;
+    background-color: rgb(250, 24, 24);
+    color: #ffffff;
     font-size:15px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }   
@@ -233,7 +456,7 @@ p{
 .uk-label-warning {
     text-align: end;
     font-size: 15px;
-    color: #070707;
+    color: #ffffff;
     padding-right: 20px;
 }
 
@@ -246,13 +469,13 @@ p{
 .uk-table th, .uk-table td {
     border: 1px solid #ddd;
     padding: 8px;
-    text-align: left;
+    text-align: center;
 }
 
 .uk-table th {
     text-align: center;
-    background-color: orange;
-    color: rgb(0, 0, 0);
+    background-color: rgb(255, 24, 24);
+    color: rgb(255, 255, 255);
 }
 
 .uk-table-striped tbody tr {
@@ -261,13 +484,13 @@ p{
 
 a.ajouter { 
     margin: 10px;
-    background-color: orange;
-    color:rgb(9, 9, 9);
+    background-color: rgb(255, 28, 28);
+    color:rgb(255, 255, 255);
     padding: 5px;
 }
 
 a.ajouter:hover{ 
-    color: white
+    color: rgb(255, 255, 255)
 }
 
 a {

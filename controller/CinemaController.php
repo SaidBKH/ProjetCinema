@@ -9,7 +9,6 @@ use Model\Connect;   //On remarquera ici l'utilisation du "use" pour accéder à
 class CinemaController {
 
 
-
     public function listFilms() {
 
         $pdo = Connect::seConnecter();
@@ -105,7 +104,6 @@ public function ajouterFilm() {
                     "Affiche" => $affiche,
                     "AnneeSortie" => $anneeSortie,
                     "IdRealisateur" => $idRealisateur,
-                
                 
                 ]);
 
@@ -222,6 +220,42 @@ public function topFilmsSemaine() {
 
     return $requete->fetchAll();
 }
+
+public function acteursPopulaires() {
+    $pdo = Connect::seConnecter();
+    $requete = $pdo->query("
+    SELECT IdActeur, Nom, Prenom, COUNT(*) as NombreFilms 
+    FROM Acteur 
+    GROUP BY IdActeur, Nom, Prenom 
+    ORDER BY NombreFilms DESC LIMIT 5");
+
+    return $requete->fetchAll();
+}
+
+public function realisateursPopulaires() {
+    $pdo = Connect::seConnecter();
+    $requete = $pdo->query("
+    SELECT IdRealisateur, Nom, Prenom, COUNT(*) as NombreFilms
+     FROM Realisateur
+      GROUP BY IdRealisateur, Nom, Prenom
+      ORDER BY NombreFilms DESC LIMIT 5");
+
+    return $requete->fetchAll();
+}
+
+
+public function genresPopulaires() {
+    $pdo = Connect::seConnecter();
+    $requete = $pdo->query("
+        SELECT g.IdGenre, g.NomGenre 
+        FROM Genre g 
+        INNER JOIN Appartient a ON g.IdGenre = a.IdGenre 
+        GROUP BY g.IdGenre 
+        ORDER BY COUNT(*) DESC LIMIT 5");
+
+    return $requete->fetchAll();
+}
+
 
  ////////////////////////////////////////////////////////////////////////////////////////////////      
 ////////////////////////////////////////   GENRES   ////////////////////////////////////////////
