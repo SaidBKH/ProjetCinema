@@ -38,7 +38,18 @@
             </div>
         </main>
     </div>
-        
+    
+       <footer class="footer">
+    <ul class= "footer-bar">
+                <li><a href="index.php?action=listFilms">FILMS</a></li>
+                <li><a href="index.php?action=listActeur">ACTEURS</a></li>
+                 <li><a href="index.php?action=listRealisateur">REALISATEURS</a></li>
+                <li><a href="index.php?action=listGenre">GENRES</a></li>
+                <li><a href="index.php?action=listRole">ROLES</a></li>
+                <li><a href="index.php?action=ajouterCasting">CASTING</a></li>
+            </ul>
+    </footer>
+
  
 </body>
 </html>

@@ -13,7 +13,7 @@ class CinemaController {
 
         $pdo = Connect::seConnecter();
         $requete = $pdo->query("
-        SELECT film.IdRealisateur,IdFilm, Titre,Duree,AnneeSortie, CONCAT(realisateur.prenom, ' ', realisateur.Nom) AS realisateur 
+        SELECT film.IdRealisateur, Note,IdFilm, Titre,Duree,AnneeSortie, CONCAT(realisateur.prenom, ' ', realisateur.Nom) AS realisateur 
         FROM film
         INNER JOIN realisateur ON film.idRealisateur = realisateur.IdRealisateur
         ORDER BY AnneeSortie DESC
@@ -36,7 +36,7 @@ class CinemaController {
         $requete->execute(["id" => $id]);
         
         $requeteActeurs = $pdo->prepare("
-        SELECT Acteur.IdActeur, Acteur.Nom, Acteur.Prenom, Acteur.Sexe, acteur.DateNaissance, Role.NomPersonnage
+        SELECT  JoueDans.IdRole,Acteur.IdActeur, Acteur.Nom, Acteur.Prenom, Acteur.Sexe, acteur.DateNaissance, Role.NomPersonnage
         FROM JoueDans
         INNER JOIN Acteur ON JoueDans.IdActeur = acteur.IdActeur
         INNER JOIN Role ON JoueDans.IdRole = Role.IdRole
@@ -195,6 +195,21 @@ public function ajouterFilm() {
 
 // $reqRealisateur = $pdo->query("SELECT IdRealisateur, Nom, Prenom FROM realisateur");
 
+public function sliderFilms() {
+    $pdo = Connect::seConnecter();
+    $requete = $pdo->query("
+        SELECT f.IdFilm, f.Titre, f.Affiche, CONCAT(r.Prenom, ' ', r.Nom) AS Realisateur, f.AnneeSortie
+        FROM Film f
+        INNER JOIN Realisateur r ON f.IdRealisateur = r.IdRealisateur
+        ORDER BY f.AnneeSortie DESC
+        LIMIT 5
+    ");
+
+    return $requete->fetchAll();
+}
+
+
+
 
 public function filmsSortieSemaine() {
     $pdo = Connect::seConnecter();
@@ -212,7 +227,7 @@ public function filmsSortieSemaine() {
 public function topFilmsSemaine() {
     $pdo = Connect::seConnecter();
     $requete = $pdo->query("
-        SELECT IdFilm, Titre, Affiche
+        SELECT IdFilm, Titre, Affiche, Note
         FROM Film
         ORDER BY Note DESC
         LIMIT 5

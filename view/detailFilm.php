@@ -13,8 +13,14 @@ $film = $requete->fetch();
 <h3>Acteurs :</h3>
 <ul>
     <?php foreach ($acteurs as $acteur): ?>
-        <li><a href="index.php?action=detailActeur&id=<?= $acteur["IdActeur"] ?>"><?= $acteur["Nom"]." ".$acteur["Prenom"]." ".$acteur["NomPersonnage"] ?></a></li>
-    <?php endforeach; ?>
+        <li>
+    <a href="index.php?action=detailActeur&id=<?= $acteur["IdActeur"] ?>">
+        <?= $acteur["Nom"]." ".$acteur["Prenom"] ?>
+    </a>
+   (<a href="index.php?action=detailRole&id=<?= $acteur["IdRole"] ?>">
+        <?= $acteur["NomPersonnage"] ?>
+    </a>)
+</li>    <?php endforeach; ?>
 </ul>
 
 <h3>Genres:</h3>

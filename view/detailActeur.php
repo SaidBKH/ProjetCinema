@@ -6,7 +6,7 @@
 <p><strong>Nom:</strong> <?= $acteur["Nom"] ?></p>
 <p><strong>Prénom:</strong> <?= $acteur["Prenom"] ?></p>
 <p><strong>Sexe:</strong> <?= $acteur["Sexe"] ?></p>
-<p><strong>Date de naissance: </strong><?= date('d/m/Y', strtotime($acteur["DateNaissance"])) ?></td></p>;
+<p><strong>Date de naissance: </strong><?= date('d/m/Y', strtotime($acteur["DateNaissance"])) ?></td></p>
 
 
 <h3>Films joués:</h3>
