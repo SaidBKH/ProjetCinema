@@ -6,8 +6,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
     <link rel="stylesheet" href="public/css/style.css">
+    
+    <meta name="homePage" content="Page d'accueil de VUE, sortie de la semaine, top film de la semaine,
+     acteurs populaires, realisateurs populaire, genres populaires">
+
 </head>
 
 <body>
@@ -33,22 +36,32 @@
         </nav>
 
     </header>
-
-
     <div class="slider-container">
     <div class="slider">
-        <?php
-        $cinemaController = new \Controller\CinemaController();
-        $films = $cinemaController->sliderFilms(); 
-        foreach ($films as $film) {
-            echo '<div class="film-item">
-                    <a href="index.php?action=detailFilm&id=' . $film['IdFilm'] . '">
-                        <img src="' . $film['Affiche'] . '" class="slider-image" alt="' . $film['Titre'] . '">
-                        <div class="film-title-overlay">' . $film['Titre'] . ' (' . $film['AnneeSortie'] . ') de ' . $film['Realisateur'] . '</div>
-                    </a>
-                  </div>';
-        }
-        ?>
+        <div class="slide-image">
+            <img src="public/img/affiche1.jpeg" alt="affiche du film Parrain">
+            <div class="film-title-overlay">
+                <p>PARRAIN</p>
+                <p> (2023)</p>
+                <p>Réalisateur : John Doe</p>
+            </div>
+        </div>
+        <div class="slide-image">
+            <img src="public/img/affiche17.jpeg" alt="Affiche du film jetli">
+            <div class="film-title-overlay">
+                <p>JETLI</p>
+                <p> (2023)</p>
+                <p>Jane Doe</p>
+            </div>
+        </div>
+        <div class="slide-image">
+            <img src="public/img/affiche5.jpg" alt="affiche du film fast and furious">
+            <div class="film-title-overlay">
+                <p>FAST AND FURIOUS</p>
+                <p>(2021)</p>
+                <p>Réalisateur : Foo Bar</p>
+            </div>
+        </div>
     </div>
 </div>
 

@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="template" content="ajouter un acteur, ajouter un casting, ajouter un film, ajouter un genre, ajouter un realisateur,
+    ajouter un role, liste des films, liste des acteurs, liste des realisateurs, liste des roles, liste des genres, details des films, details des genres,
+    details des realisateurs, details des roles,details des acteurs, sexe,date de naissance, titre de film, nom, prenom , note,synopsis, affiche, duree, Année de sortie
+    ">
     <link rel="stylesheet" href="public/css/style.css">
 </head>
 

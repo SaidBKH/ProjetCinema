@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="public/css/style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <figure>
+            <a href="index.php?action=homePage">
+            <img class="logo" src="public/img/logo.png" alt="Le logo" height="100px"/>
+            </a>
+        </figure>
+        
+        <nav class = "uk-navbar-conteiner"> 
+
+            <ul class= "navbar-list">
+                <li><a href="index.php?action=listFilms">FILMS</a></li>
+                <li><a href="index.php?action=listActeur">ACTEURS</a></li>
+                 <li><a href="index.php?action=listRealisateur">REALISATEURS</a></li>
+                <li><a href="index.php?action=listGenre">GENRES</a></li>
+                <li><a href="index.php?action=listRole">ROLES</a></li>
+                <li><a href="index.php?action=ajouterCasting">CASTING</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <div class="slider-container">
+    <div class="slider">
+        <div class="slide-image">
+            <img src="public/img/affiche1.jpeg" alt="Slide 1">
+            <div class="film-title-overlay">
+                <p>PARRAIN</p>
+                <p> (2023)</p>
+                <p>Réalisateur : John Doe</p>
+            </div>
+        </div>
+        <div class="slide-image">
+            <img src="public/img/affiche17.jpeg" alt="Slide 2">
+            <div class="film-title-overlay">
+                <p>JETLI</p>
+                <p> (2023)</p>
+                <p>Jane Doe</p>
+            </div>
+        </div>
+        <div class="slide-image">
+            <img src="public/img/affiche5.jpg" alt="Slide 3">
+            <div class="film-title-overlay">
+                <p>FAST AND FURIOUS</p>
+                <p>(2021)</p>
+                <p>Réalisateur : Foo Bar</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="films-sortie-semaine section-title">
+    <div class="titre">
+        <h2>SORTIE DE LA SEMAINE :</h2>
+    </div>
+    <div class="voirPlusSortie">
+        <a href="index.php?action=listFilms">Voir plus</a>
+    </div>
+    <div class="list-film">
+        <div class="film">
+                    <a href="index.php?action=detailFilm&id=10">
+                        <div class="film-image-container">
+                            <img src="https://wallpapers.com/images/hd/jurassic-park-reddish-yellow-background-kwzkfcdb73er17ey.jpg" class="film-image" alt="Mystère">
+                            <div class="film-title-overlay-sortie">Mystère</div>
+                        </div>
+                    </a>
+                </div><div class="film">
+                    <a href="index.php?action=detailFilm&id=4">
+                        <div class="film-image-container">
+                            <img src="https://www.jolie-bobine.fr/wp-content/uploads/2022/12/Nos-moments-preferes-Attrape-moi-si-tu-peux.jpg" class="film-image" alt="Futur Mystérieux">
+                            <div class="film-title-overlay-sortie">Futur Mystérieux</div>
+                        </div>
+                    </a>
+                </div><div class="film">
+                    <a href="index.php?action=detailFilm&id=7">
+                        <div class="film-image-container">
+                            <img src="https://i.ytimg.com/vi/RNKFKDs5SGk/maxresdefault.jpg" class="film-image" alt="Secrets Obscurs">
+                            <div class="film-title-overlay-sortie">Secrets Obscurs</div>
+                        </div>
+                    </a>
+                </div><div class="film">
+                    <a href="index.php?action=detailFilm&id=6">
+                        <div class="film-image-container">
+                            <img src="https://wallpapers.com/images/hd/jurassic-park-reddish-yellow-background-kwzkfcdb73er17ey.jpg" class="film-image" alt="Amour Éternel">
+                            <div class="film-title-overlay-sortie">Amour Éternel</div>
+                        </div>
+                    </a>
+                </div><div class="film">
+                    <a href="index.php?action=detailFilm&id=2">
+                        <div class="film-image-container">
+                            <img src="https://i.ytimg.com/vi/RNKFKDs5SGk/maxresdefault.jpg" class="film-image" alt="Rire Express">
+                            <div class="film-title-overlay-sortie">Rire Express</div>
+                        </div>
+                    </a>
+                </div>    </div>
+</div>
+
+
+    
+
+    <div class="top-films-semaine section-title">
+        <div class="titre">
+            <h2>TOP FILMS DE LA SEMAINE :</h2>
+        </div>
+        <div class="voirPlusTop">
+            <a href="index.php?action=listFilms">Voir plus</a>
+        </div>
+        
+        <div class="list-film">
+        <div class="film" data-rank="1">
+                    <span class="rank-badge">1</span> 
+                    <a href="index.php?action=detailFilm&id=5">
+                        <div class="film-image-container">
+                            <img src="https://w.forfun.com/fetch/3e/3e9286980a82b117b1fecdb11a2b3886.jpeg" class="film-image" alt="Terreur Nocturne">
+                            <div class="film-title-overlay-top">Terreur Nocturne</div>
+                            </a> </div>
+                    
+                    <div class="film-note">Note: 5/5</div>
+                  </div><div class="film" data-rank="2">
+                    <span class="rank-badge">2</span> 
+                    <a href="index.php?action=detailFilm&id=2">
+                        <div class="film-image-container">
+                            <img src="https://i.ytimg.com/vi/RNKFKDs5SGk/maxresdefault.jpg" class="film-image" alt="Rire Express">
+                            <div class="film-title-overlay-top">Rire Express</div>
+                            </a> </div>
+                    
+                    <div class="film-note">Note: 4/5</div>
+                  </div><div class="film" data-rank="3">
+                    <span class="rank-badge">3</span> 
+                    <a href="index.php?action=detailFilm&id=7">
+                        <div class="film-image-container">
+                            <img src="https://i.ytimg.com/vi/RNKFKDs5SGk/maxresdefault.jpg" class="film-image" alt="Secrets Obscurs">
+                            <div class="film-title-overlay-top">Secrets Obscurs</div>
+                            </a> </div>
+                    
+                    <div class="film-note">Note: 4/5</div>
+                  </div><div class="film" data-rank="4">
+                    <span class="rank-badge">4</span> 
+                    <a href="index.php?action=detailFilm&id=8">
+                        <div class="film-image-container">
+                            <img src="https://w.forfun.com/fetch/3e/3e9286980a82b117b1fecdb11a2b3886.jpeg" class="film-image" alt="Mission Impossible">
+                            <div class="film-title-overlay-top">Mission Impossible</div>
+                            </a> </div>
+                    
+                    <div class="film-note">Note: 4/5</div>
+                  </div><div class="film" data-rank="5">
+                    <span class="rank-badge">5</span> 
+                    <a href="index.php?action=detailFilm&id=1">
+                        <div class="film-image-container">
+                            <img src="https://wallpapers.com/images/hd/jurassic-park-reddish-yellow-background-kwzkfcdb73er17ey.jpg" class="film-image" alt="Action Hero">
+                            <div class="film-title-overlay-top">Action Hero</div>
+                            </a> </div>
+                    
+                    <div class="film-note">Note: 3/5</div>
+                  </div>       
+        </div>
+    </div>
+
+    <div class="populaires-sections section-title">
+        <div class="acteurs-populaires ">
+            <div class="titre">
+                <h2>ACTEURS LES PLUS POPULAIRES</h2>
+            </div>
+            
+            <ul>
+                <li><a href="index.php?action=detailActeur&id=1">Pierre Jean</a></li><li><a href="index.php?action=detailActeur&id=5">napoleon jean</a></li><li><a href="index.php?action=detailActeur&id=9">Smith will</a></li><li><a href="index.php?action=detailActeur&id=2">dupont Alice</a></li><li><a href="index.php?action=detailActeur&id=6">Marie Emma</a></li>            </ul>
+            <div class="voirPlusActeur">
+                <a href="index.php?action=listActeur">Voir plus</a>
+            </div>
+        </div>
+
+        <div class="realisateurs-populaires ">
+            <div class="titre">
+                <h2>REALISATEURS LES PLUS POPULAIRES</h2>
+            </div>
+            <ul>
+                <li><a href="index.php?action=detailRealisateur&id=1">zak dénis</a></li><li><a href="index.php?action=detailRealisateur&id=5">Williams David</a></li><li><a href="index.php?action=detailRealisateur&id=2">d'arc Jane</a></li><li><a href="index.php?action=detailRealisateur&id=6">Pierre jacque</a></li><li><a href="index.php?action=detailRealisateur&id=3">jackson Michael</a></li>            </ul>
+            <div class="voirPlusRealisateur">
+                <a href="index.php?action=listRealisateur">Voir plus</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="genres-populaires section-title">
+    <div class="titre">
+        <h2>GENRES POPULAIRES</h2>
+    </div>
+
+    <ul>
+        <li><a href="index.php?action=detailGenre&id=1">Action</a></li><li><a href="index.php?action=detailGenre&id=7">Thriller</a></li><li><a href="index.php?action=detailGenre&id=4">Science-Fiction</a></li><li><a href="index.php?action=detailGenre&id=6">Romance</a></li><li><a href="index.php?action=detailGenre&id=2">Comédie</a></li>    </ul>
+    <div class="voirPlusGenre ">
+                <a href="index.php?action=listGenre">Voir plus</a>
+            </div>
+    </div>
+
+    <footer class="footer">
+
+        <ul class= "footer-bar">
+                <li><a href="index.php?action=listFilms">FILMS</a></li>
+                <li><a href="index.php?action=listActeur">ACTEURS</a></li>
+                 <li><a href="index.php?action=listRealisateur">REALISATEURS</a></li>
+                <li><a href="index.php?action=listGenre">GENRES</a></li>
+                <li><a href="index.php?action=listRole">ROLES</a></li>
+                <li><a href="index.php?action=ajouterCasting">CASTING</a></li>
+        </ul>
+
+        <div class="social-icons">
+         <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+
+    </footer>
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.slider').slick({
+            autoplay: true, 
+            autoplaySpeed: 3000, 
+            arrows: true, 
+            dots: true 
+        });
+    });
+</script>
+
+
+
+</body>
+</html>
