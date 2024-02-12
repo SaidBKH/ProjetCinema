@@ -6,7 +6,7 @@ use Controller\CinemaController;
 // On autocharge les classes du projet
 spl_autoload_register(function ($class_name){
     // Remplace les antislashs par des slashs pour obtenir le chemin du fichier
-    require str_replace("\\","/", $class_name) . ".php";
+    require str_replace("\\",DIRECTORY_SEPARATOR, $class_name) . ".php"; // (\ pour windows et / pour les OS sous noyaux UNIX)
 });
 
 // On instancie le controller Cinema
