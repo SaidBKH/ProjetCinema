@@ -11,8 +11,6 @@
     <meta name="description" content="Page d'accueil de VUE, avec les sorties de la semaine, les tops films de la semaine,
      les acteurs populaires, les realisateurs populaires, les genres populaires...">
 
-
-
      
 <title> cinema vue</title>
 </head>
