@@ -20,6 +20,8 @@
 $titre = "AJOUTER UN REALISATEUR";
 $titre_secondaire = "AJOUTER UN REALISATEUR";
 $contenu = ob_get_clean();
+$metaDescription = "ajouter un réalisateur, nom realisateur, prenom realisateur";
+
 require "template.php";
 ?>
 

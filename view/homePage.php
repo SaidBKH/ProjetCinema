@@ -8,9 +8,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="public/css/style.css">
     
-    <meta name="homePage" content="Page d'accueil de VUE, sortie de la semaine, top film de la semaine,
-     acteurs populaires, realisateurs populaire, genres populaires">
+    <meta name="description" content="Page d'accueil de VUE, avec les sorties de la semaine, les tops films de la semaine,
+     les acteurs populaires, les realisateurs populaires, les genres populaires...">
 
+
+
+     
+<title> cinema vue</title>
 </head>
 
 <body>
@@ -80,7 +84,7 @@
         $films = $cinemaController->filmsSortieSemaine(); // Appel de la méthode pour récupérer les films
         foreach ($films as $film) {
             echo '<div class="film">
-                    <a href="index.php?action=detailFilm&id=' . $film['IdFilm'] . '">
+                    <a href="index.php?action=detailFilm&id=' . $film['IdFilm'] . '" title = "detail du film">
                         <div class="film-image-container">
                             <img src="' . $film['Affiche'] . '" class="film-image" alt="' . $film['Titre'] . '">
                             <div class="film-title-overlay-sortie">' . $film['Titre'] . '</div>
@@ -111,7 +115,7 @@
         foreach ($topFilms as $film) {
             echo '<div class="film" data-rank="' . $rank . '">
                     <span class="rank-badge">' . $rank . '</span> 
-                    <a href="index.php?action=detailFilm&id=' . $film['IdFilm'] . '">
+                    <a href="index.php?action=detailFilm&id=' . $film['IdFilm'] . '" title = "detail du film">
                         <div class="film-image-container">
                             <img src="' . $film['Affiche'] . '" class="film-image" alt="' . $film['Titre'] . '">
                             <div class="film-title-overlay-top">' . $film['Titre'] . '</div>
@@ -196,16 +200,12 @@
         </ul>
 
         <div class="social-icons">
-         <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+         <a href="www.twitter.com" title = "reseau social twitter"><i class="fab fa-twitter"></i></a>
+            <a href="www.facebook.com" title = "reseau social facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="www.instagram.com" title = "reseau social twitter"><i class="fab fa-instagram"></i></a>
         </div>
 
     </footer>
-
-
-
-
 
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

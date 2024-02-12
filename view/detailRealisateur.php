@@ -12,5 +12,7 @@
 $titre = "DETAILS DU REALISATEUR";
 $titre_secondaire = $realisateur["Nom"]." ".$realisateur["Prenom"];
 $contenu = ob_get_clean();
+$metaDescription = "Les films du realisateur ".$realisateur["Nom"]." ".$realisateur["Prenom"]."";
+
 require "view/template.php";
 ?>

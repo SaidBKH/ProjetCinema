@@ -15,6 +15,8 @@
 $titre = "AJOUTER UN GENRE";
 $titre_secondaire = "AJOUTER UN GENRE";
 $contenu = ob_get_clean();
+$metaDescription = "ajouter un genre, nom du genre";
+
 require "template.php";
 ?>
 

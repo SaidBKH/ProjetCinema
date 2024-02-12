@@ -39,5 +39,7 @@
 $titre = "AJOUTER UN CASTING";
 $titre_secondaire = "AJOUTER UN CASTING";
 $contenu = ob_get_clean();
+$metaDescription = "ajouter un casting avec le titre du film, le nom et prenom de l'acteur, son role avec le nom du personnage";
+
 require "template.php";
 ?>

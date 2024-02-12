@@ -2,11 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="template" content="ajouter un acteur, ajouter un casting, ajouter un film, ajouter un genre, ajouter un realisateur,
-    ajouter un role, liste des films, liste des acteurs, liste des realisateurs, liste des roles, liste des genres, details des films, details des genres,
-    details des realisateurs, details des roles,details des acteurs, sexe,date de naissance, titre de film, nom, prenom , note,synopsis, affiche, duree, Année de sortie
-    ">
+    <meta name="description" content=<?= $metaDescription ?>>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="public/css/style.css">
+
+
+    <title>cinema Vue</title>
 </head>
 
 <body>

@@ -37,6 +37,7 @@ pour stocker le contenu dans une variable $contenu -->
 $titre = "LISTE DES ACTEURS :";
 $titre_secondaire = "LISTE DES ACTEURS :";
 $contenu = ob_get_clean() ;
+$metaDescription = "La liste des acteurs, nom, prenom, sexe, date de naissance" ;
 require "view/template.php";
 
 // Le require de fin permet d'injecter le contenu dans le template "squelette" > template.php

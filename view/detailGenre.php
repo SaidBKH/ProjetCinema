@@ -1,4 +1,9 @@
-<?php ob_start(); ?>
+<?php ob_start(); 
+
+$nomgenre = $requete->fetch();
+
+
+?>
 
 
 <h1><?= $nomGenre ?></h1>
@@ -15,5 +20,7 @@
 $titre = "DETAILS DES FILMS PAR GENRE";
 $titre_secondaire = "DETAILS DES FILMS PAR GENRE";
 $contenu = ob_get_clean();
+$metaDescription = "Les films du genre $nomGenre";
+
 require "view/template.php";
 ?>

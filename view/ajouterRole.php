@@ -15,6 +15,8 @@
 <?php
 $titre = "AJOUTER UN ROLE";
 $titre_secondaire = "AJOUTER UN ROLE";
+$metaDescription = "ajouter un role, nom du personnage";
+
 $contenu = ob_get_clean();
 require "template.php";
 ?>

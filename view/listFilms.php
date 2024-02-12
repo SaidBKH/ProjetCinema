@@ -33,4 +33,6 @@
 $titre = "LISTE DES FILMS :";
 $titre_secondaire = "LISTE DES FILMS :";
 $contenu = ob_get_clean();
+$metaDescription = "La liste des films avec le titre, la durée, l'année de sortie, le nom du realisateur" ;
+
 require "view/template.php";

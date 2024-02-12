@@ -27,4 +27,5 @@
 $titre = "LISTE DES ROLES :";
 $titre_secondaire = "LISTE DES ROLES :";
 $contenu = ob_get_clean() ;
+$metaDescription = "La liste des roles et le nom des personnage" ;
 require "view/template.php";

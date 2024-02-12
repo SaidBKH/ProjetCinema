@@ -1,5 +1,11 @@
 
-<?php ob_start(); ?>
+<?php ob_start();
+
+
+
+?>
+
+
 
 <h2>Détail de l'acteur</h2>
 
@@ -22,4 +28,8 @@
 $titre = "DETAILS DE L'ACTEUR";
 $titre_secondaire = $acteur["Prenom"]." ".$acteur["Nom"];
 $contenu = ob_get_clean();
+$metaDescription = "l'acteur ".$acteur["Nom"]." ".$acteur["Prenom"]." de sexe ".$acteur["Sexe"].", date de naissance le ".$acteur["DateNaissance"].". 
+".$acteur["Nom"]." ".$acteur["Prenom"]."; films joués : ".$filmJoue["Titre"]." ".$filmJoue["AnneeSortie"]." ".$filmJoue["NomPersonnage"]."";
+ 
+
 require "view/template.php";

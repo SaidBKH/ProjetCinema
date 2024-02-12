@@ -27,13 +27,9 @@ minlength :Le nombre minimal de caractères, -->
     <input type="number" id="note" name="note" min=0 max= 5 required>
     <br>
 
-
-
-    <label for="affiche">Affiche :</label>
+   <label for="affiche">Affiche :</label>
     <input type="img" id="affiche" name="affiche" required>
     <br>
-
-
 
     <label for="anneeSortie">Année de sortie :</label>
     <input type="number" id="anneeSortie" name="anneeSortie" min=1900 max=2024 pattern="[0-9]{4}" required>
@@ -66,6 +62,8 @@ minlength :Le nombre minimal de caractères, -->
 $titre = "AJOUTER UN FILM";
 $titre_secondaire = "AJOUTER UN FILM";
 $contenu = ob_get_clean();
+$metaDescription = "Ajouter un film avec un titre, la durée en minute, une note sur 5, un lien pour l'affiche,l'année de sortie, le realisateur et le genre.";
+
 require "template.php";
 ?>
 

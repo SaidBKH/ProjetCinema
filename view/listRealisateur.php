@@ -29,6 +29,7 @@
 $titre = "LISTE DES REALISATEURS :";
 $titre_secondaire = "LISTE DES REALISATEURS :";
 $contenu = ob_get_clean() ;
+$metaDescription = "La liste des realisateurs avec le nom et prenom" ;
 require "view/template.php";
 
 // Le require de fin permet d'injecter le contenu dans le template "squelette" > template.php

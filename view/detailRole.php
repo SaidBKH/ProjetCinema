@@ -1,4 +1,4 @@
-<!-- view/detailRole.php -->
+
 
 <?php ob_start(); ?>
 
@@ -16,4 +16,6 @@
 $titre = "DETAILS DU ROLE";
 $titre_secondaire = "DETAILS DU ROLE";
 $contenu = ob_get_clean();
+$metaDescription = "Les details du role ".$roleDetail["NomPersonnage"]."".$roleDetail["ActeurPrenom"]." ".$roleDetail["ActeurNom"]."".$roleDetail["NomFilm"]."";
+
 require "view/template.php";

@@ -29,6 +29,9 @@
 $titre = "AJOUTER UN ACTEUR";
 $titre_secondaire = "AJOUTER UN ACTEUR";
 $contenu = ob_get_clean();
+$metaDescription = "Ajouter un acteur avec un nom, un prenom, son sexe, et une date de naissance";
+
+
 require "template.php";
 ?>
 

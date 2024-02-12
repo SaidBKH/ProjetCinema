@@ -33,6 +33,7 @@ use Model\Connect;
 $titre = "LISTE DES GENRES :";
 $titre_secondaire = "LISTE DES GENRES :";
 $contenu = ob_get_clean() ;
+$metaDescription = "La liste des genres des films" ;
 require "view/template.php";
 
 // Le require de fin permet d'injecter le contenu dans le template "squelette" > template.php
