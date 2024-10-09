@@ -20,4 +20,6 @@ Ce projet est un site développé des fonctionnalités autour du  cinema.
 - le details des genres
 - le details des realisateurs
 - le details des roles
-  
+
+![projetCinema](./projetCinema.png)
+
