@@ -1,6 +1,6 @@
 PROJET CINEMA 
 ## Description
-Ce projet est un site développé des fonctionnalités autour du  cinema.
+Ce projet est une application qui développe des fonctionnalités autour du  cinema.
 
 ## Fonctionnalités
 
